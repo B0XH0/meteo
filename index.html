@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <h2>METEO</h2>
+        <p class="texte">Consultez les prévisions météo pour votre ville et restez informé des conditions climatiques actuelles.</p>
+        <div class="display-meteo">
+            <div class="meteo">
+            
+                <input type="text" id="ville" placeholder="Entrez une ville, pays"/>
+
+                <button id="refreshBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         height="24px"
+                         viewBox="0 -960 960 960"
+                         width="24px" fill="#000000">
+                        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg>
+                </button>
+                <div id="error"></div>
+            </div>
+        </div>
+
+        <div id="meteoData" style="display: none;">
+            <button id="fermerDocument" class="fermer">X</button>
+            <div class="groupe">
+            <div class="entete">
+                <img id="weatherIcon" src="" alt="Icône météo" class="weatherIcon" />
+                <div class="info">
+                    <h3 id="cityName"></h3>
+                    <p id="currentDate"></p>
+                </div>
+            </div>
+         
+            <div class="display">
+                <div class="display_plan">
+                <div class="temperature" >
+                    <p id="temp"></p>
+                    <p id="description"></p>
+                </div>
+            <p class="ressentie">Ressentie: <span id="feelsLike"></span></p>
+        </div>
+                <div class="display_plan pad">
+                    <div class="display1">
+                    <img src="css/img/vent.png" alt="icone du vent">
+                    <p>Vitesse:<span id="windSpeed"></span></p>
+                    </div>
+                    <div class="display1">
+                    <img id="image" src="" alt="">
+                    <p>Direction:<span id="windDirection"></span></p>
+                    </div>
+                </div>
+
+                <div class="display_plan">
+                <div class="display_icone">
+                    <div class="display1">
+                        <img src="css/img/pluie.png" alt="icone de pluie">
+                        <p>Pluie:<span id="rainElement"></span></p>
+                    </div>
+                    <div class="display2">
+                        <img src="css/img/neige.png" alt="icone de neige">
+                        <p>Neige:<span id="snowElement"></span></p>
+                    </div>
+                </div>
+
+                <div class="display_icone">
+                    <div class="display1">
+                        <img src="css/img/soleil.png" alt="">
+                        <p>Lever:<span id="sunriseElement"></span></p>
+                    </div>
+                    <div class="display2">
+                        <img src="css/img/lune.png" alt="">
+                        <p>Coucher:<span id="sunsetElement"></span></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
