@@ -59,7 +59,7 @@ export function meteo() {
             .then(response => response.json())
             .then(data => {
                 if (data.cod !== 200) {
-                    showError('Ville non trouvée');
+                    showError('Ville non trouvée, veuillez réessayer.');
                     return;
                 }
 
@@ -119,8 +119,8 @@ export function meteo() {
                 meteoDataElement.style.display = 'block';
             })
             .catch(error => {
-                console.error('Erreur lors de la récupération des données météo:', error);
-                showError('Erreur lors de la récupération des données météo');
+                console.error('Erreur météo:', error);
+                showError("Un petite erreur c'est produite veuillez ressayer plustard");
             });
     }
 
@@ -166,7 +166,7 @@ export function meteo() {
     }
     
 
-    // rechrechissement du bouton
+    // raffrechissement du bouton
     if (refreshBtn) {
         refreshBtn.addEventListener('click', refresh);
     }

@@ -4,7 +4,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
     background: -webkit-linear-gradient(359deg, #792a7e,#8a3caf,#da74e2);                        
     background: linear-gradient(359deg, #792a7e,#8a3caf,#da74e2);    
@@ -113,23 +113,32 @@ margin-top: 100px;
 }
 
 .display {
+    position: absolute;
+    top: 200px;
+    left: 45%;
+    transform: translateX(-50%);
     display: flex;
     justify-content:center;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
     gap: 30px;
     margin-right: 100px;
 }
 
 .entete {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
     display: inline-flex;
     flex-direction: row;
-    padding: 10px 50px 10px 50px;
+    padding: 10px 50px;
     margin: 20px;
     border-radius: 10px;
-    background-color: rgba(222, 216, 206, 0.274);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+
 
 span {
     display: block;
@@ -155,22 +164,19 @@ span {
 }
 
 .temperature {
-    padding: 75px;
-    background: rgba(255, 255, 255, 0.25);
+    padding: 65px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .ressentie {
-    background: rgba(255, 255, 255, 0.25);
+    padding: 10px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 #feelsLike {
@@ -200,12 +206,10 @@ span {
 
 .display1, .display2 {
     text-align: center;
-    background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     width: 210px;
     height: 150px;
 }
@@ -237,7 +241,29 @@ margin-top: 5px;
         margin: 0;
         padding: 0;
         height: 100vh;
+        overflow-x: hidden;
     }
+    
+    /* .fermer {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+        padding: 10px;
+        color: #ddd;
+    }
+    
+    .fermer:hover {
+        background-color: #94429a;
+        border-radius: 5px;
+        animation: 250ms ease-in-out;
+    
+    } */
     h2 {
         text-align: center;
         font-weight: 600;
@@ -251,18 +277,36 @@ margin-top: 5px;
     .groupe{
         margin-top: 20px;
     }
-
-    .display{
-        margin-left: 0;
-        margin: 20px;
+ 
+    .display {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
-        justify-content: center;
+        justify-content:center;
         flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .display_plans{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .entete {
+        position: absolute;
+        top: 30px;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 320px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     }
     #meteoData{
         height: 200vh;
-        width: 100vw;
     }
+
 
     .display_icone{
         width: auto;
@@ -271,7 +315,26 @@ margin-top: 5px;
       margin-top: 5px;
     }
     .display_plan{
-        width: auto;
         display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .temperature,.ressentie{
+        background: none;
+        border: none;
+        font-size: 20px;
+    }
+    .temperature{
+        padding: 20px;
+    }
+    .ressentie{
+        padding: 50px;
+    }
+    #temps, #description{
+        font-size: 16px;
     }
 }
