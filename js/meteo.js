@@ -86,7 +86,7 @@ export function meteo() {
 
                 // Mettre à jour la vitesse du vent (en km/h)
                 if (windSpeedElement) {
-                    const windSpeed = (meteo.wind.speed * 3.6).toFixed(1); // Conversion m/s à km/h
+                    const windSpeed = (meteo.wind.speed * 3.6).toFixed(1);
                     windSpeedElement.textContent = `${windSpeed} km/h`;
                 }
 
